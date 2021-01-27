@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>happy birthday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pyro">
+        <div class="before"></div>
+        <div class="after"></div>
+        <div class="content">
+        <p id="demo" class="wish"></p>
+    </div>
+        <button class ="btn" onclick="typeWriter()" style="margin:100px;">click click!!</button>
+    </div>
+    <script>
+        var i = 0;
+        var txt = `Happy birthday Tarang!!
+         I wish you all the happiness in the world. Thanks you for sticking around for  almost 6.5 years now. And remember, I had and will always have your back. See you soon <3`;
+        var speed = 100;
+        
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+        </script>
+</body>
+</html>
